@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <form class="form-signin" #form="ngForm" (ngSubmit)="CreateTask()">
+        <div class="container-fluid">
+            <h2 class="form-signin-heading">Create New Task</h2>
+            
+            <br/>
+            <div class="row">
+                <div class="col-md-3">
+                    <label for="taskname" class="sr-only">Task Title</label><br/>
+                <input type="text" id="taskname" name="taskname" ngModel class="form-control" placeholder="TaskTitle" [(ngModel)]="createTask.TaskName" required autofocus>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+            <label for="teamlead" class="sr-only">Team Lead</label>
+            <input type="text" id="teamlead" name="teamlead" ngModel class="form-control col-md-6" placeholder="Team Lead" [(ngModel)]="createTask.TeamLead" required>
+        </div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-md-2">
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Create Task</button>
+            </div>
+        </div>       
+        </div>
+    </form>
+    </div>
