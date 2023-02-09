@@ -11,11 +11,14 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { LoginComponent } from './login/login.component';
 import { ToastrModule } from 'ngx-toastr';
 import { CreateTaskComponent } from './create-task/create-task.component';
+import { CommonModule } from '@angular/common';
 
 //all components routes
 const routes: Routes = [
   { path: '', component: HomepageComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'homepage', component: HomepageComponent },
+  {path:'create-task',component:CreateTaskComponent}
 ];
 
 //function is use to get jwt token from local storage
@@ -34,6 +37,7 @@ export function tokenGetter() {
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    CommonModule,
     ReactiveFormsModule,
     RouterModule.forRoot(routes),
     JwtModule.forRoot({
